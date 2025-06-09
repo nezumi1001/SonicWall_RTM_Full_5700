@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <properties>
+        <property name="LOG_HOME">./src/main/resources/Log/log4j</property>
+        <property name="FILE_NAME">myLog</property>
+    </properties>
+    <Appenders>
+        <RollingFile name="File"
+                     filePattern="${LOG_HOME}/$${date:yyyy-MM-dd}/${FILE_NAME}-%d{yyMMdd}.log">
+            <PatternLayout
+                    pattern="%d{date:yyyy-MM-dd HH:mm:ss.SSS}: - %-5level- %c{1}: %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+        </RollingFile>
+        <Console name="Console">
+            <PatternLayout
+                    pattern="%d{date:yyyy-MM-dd HH:mm:ss.SSS}: - %-5level- %c{1}: %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="test" level="trace" additivity="false">
+            <AppenderRef ref="File" />
+        </Logger>
+        <Root level="trace">
+            <AppenderRef ref="File" />
+        </Root>
+    </Loggers>
+</Configuration>
