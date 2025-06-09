@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SonicWall TestSuite" parallel="classes" thread-count="2">
+    <test name="Part1 - Management">
+        <classes>
+            <class name="com.demo.apitest.Test_RTM_MU">
+                <methods>
+                    <include name="test_Step01_Upload_FW"/>
+                    <include name="test_Step02_Upload_FW"/>
+                    <include name="test_Step03_Upload_FW"/>
+                    <include name="test_Step04_Upload_FW"/>
+                    <include name="test_Step05_Upload_FW"/>
+                    <include name="test_Step06_Upload_FW"/>
+                    <include name="test_Step07_Upload_FW"/>
+                    <include name="test_Step08_Upload_FW"/>
+                    <include name="test_Step09_Upload_FW"/>
+                    <include name="test_Step10_Upload_FW"/>
+                    <include name="test_Step11_Upload_FW"/>
+
+                    <!-- internal wireless -->
+                    <!-- ******************************************************************** -->
+                    <!--                    <include name="test_Step12_Upload_FW"/>-->
+                    <!--                    <include name="test_Step13_Upload_FW"/>-->
+                    <!-- ******************************************************************** -->
+
+                    <include name="test_Step14_Upload_FW"/>
+                    <include name="test_Step15_Upload_FW"/>
+                    <include name="test_Step16_Upload_FW"/>
+
+                    <!-- internal wireless -->
+                    <!-- ******************************************************************** -->
+                    <!--                    <include name="test_Step17_Upload_FW"/>-->
+                    <!-- ******************************************************************** -->
+
+                    <include name="test_Step18_Upload_FW"/>
+                    <include name="test_Step19_Upload_FW"/>
+                    <include name="test_Step20_Upload_FW"/>
+                    <include name="test_Step21_Upload_FW"/>
+                    <include name="test_Step22_Upload_FW"/>
+                    <include name="test_Step23_Upload_FW"/>
+                    <include name="test_Step24_Upload_FW"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Part2 - Safemode">
+        <classes>
+            <class name="com.demo.apitest.Test_RTM_SM">
+                <methods>
+                    <include name="test_Step25_Upload_FW"/>
+                    <include name="test_Step26_Upload_FW"/>
+                    <include name="test_Step27_Upload_FW"/>
+                    <include name="test_Step28_Upload_FW"/>
+                    <include name="test_Step29_Upload_FW"/>
+                    <include name="test_Step30_Upload_FW"/>
+                    <include name="test_Step31_Upload_FW"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
